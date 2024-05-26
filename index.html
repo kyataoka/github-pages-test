@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <button id="btn">Open Fullscreen App</button>
+
+  <script>
+    document.getElementById('btn').addEventListener('click', function () {
+      const currentUrl = window.location.href;
+      const fullscreenAppUrl = `${currentUrl}fullscreen_app/`;
+      const youtubeUrl = `https://www.youtube.com/redirect?q=${fullscreenAppUrl}`;
+      // Open the fullscreen app in current tab
+      window.location.href = youtubeUrl;
+    });
+  </script>
+</body>
+
+</html>
